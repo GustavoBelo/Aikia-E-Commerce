@@ -24,3 +24,56 @@ injectSvgSprite('https://demo.bootstrapious.com/varkala/1-1/img/shape/blob-sprit
 var options = {
     navbarExpandPx: 992
 }
+
+function registerValidate(){
+	if(registerName.value.length <= 3){
+		alert("Informe um nome válido.");
+		return false;
+	}
+	// a@a.com
+	if(registerEmail.value.length<6 ||
+		registerEmail.value.indexOf("@") <=0 ||
+		registerEmail.value.lastIndexOf(".") <= registerEmail.value.indexOf("@") ){
+		alert("informe um email válido.");
+		return false;
+	}
+    if(registerPassword.value.length<8) {
+        alert("A senha deve ter no mínimo 8 caracteres.");
+        return false
+    }
+
+    alert("Usuário cadastrado com sucesso")
+    clear(registerName, registerEmail, registerTel, registerPassword)
+}
+
+function loginValidate(){
+    if(email.value.length<6 ||
+		email.value.indexOf("@") <=0 ||
+		email.value.lastIndexOf(".") <= email.value.indexOf("@") ){
+		alert("Este email não está cadastrado no sistema.");
+		return false;
+	}
+    if (loginPassword.value.length < 8) {
+        alert("Senha incorreta.")
+        return false
+    }
+
+    alert("Você entrou.")
+    clear(email, loginPassword)
+}
+
+function clear(n1, n2, n3, n4){
+    n1.focus()
+    n2.focus()
+
+    n1.value=""
+    n2.value=""
+
+    if (n3 && n4) {
+        n1.focus()
+        n2.focus()
+
+        n3.value=""
+        n4.value=""
+    }
+}

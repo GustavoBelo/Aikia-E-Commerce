@@ -739,7 +739,7 @@
                 aria-selected="true">Entrar</a></li>
             <li class="list-inline-item"><a class="nav-link nav-link-lg" data-toggle="tab" href="#loginModalTabRegister"
                 role="tab" id="loginModalLinkRegister" aria-controls="loginModalTabRegister"
-                aria-selected="false">Registrar</a></li>
+                aria-selected="false">Cadastrar</a></li>
           </ul>
           <hr class="mb-3">
           <div class="tab-content">
@@ -748,7 +748,7 @@
               <form action="customer-orders.html" method="get">
                 <div class="form-group">
                   <label class="form-label" for="email">Email</label>
-                  <input class="form-control" id="email" type="text">
+                  <input class="form-control" id="email" type="email">
                 </div>
                 <div class="form-group">
                   <div class="row">
@@ -763,20 +763,24 @@
                 <div class="form-group">
                   <div class="custom-control custom-checkbox">
                     <input class="custom-control-input" id="loginRemember" type="checkbox">
-                    <label class="custom-control-label text-muted" for="loginRemember"> <span class="text-sm">Lembrar de mim neste computador</span></label>
+                    <label class="custom-control-label text-muted" for="loginRemember"> <span class="text-sm">Lembrar de
+                        mim neste computador</span></label>
                   </div>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-block btn-outline-dark" type="submit"><i class="fa fa-sign-in-alt mr-2"></i>
+                  <button class="btn btn-block btn-outline-dark" type="button" onclick="loginValidate()"><i
+                      class="fa fa-sign-in-alt mr-2"></i>
                     Entrar</button>
                 </div>
               </form>
               <hr class="my-3 hr-text letter-spacing-2" data-content="OU">
               <div class="text-center">
                 <button class="btn btn btn-outline-primary letter-spacing-0" data-toggle="tooltip"
-                  title="Entrar com o Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Entrar com o Facebook</span></button>
+                  title="Entrar com o Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Entrar com
+                    o Facebook</span></button>
                 <button class="btn btn btn-outline-muted letter-spacing-0" data-toggle="tooltip"
-                  title="Entrar com o Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Entrar com o Google</span></button>
+                  title="Entrar com o Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Entrar com o
+                    Google</span></button>
               </div>
             </div>
             <div class="tab-pane fade px-3" id="loginModalTabRegister" role="tabpanel"
@@ -784,27 +788,36 @@
               <form action="customer-orders.html" method="get">
                 <div class="form-group">
                   <label class="form-label" for="registerName">Nome</label>
-                  <input class="form-control" id="registerName" type="text">
+                  <input class="form-control" id="registerName" type="text" required>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="registerEmail">Email</label>
-                  <input class="form-control" id="registerEmail" type="text">
+                  <label class="form-label">Email</label>
+                  <input class="form-control" id="registerEmail" type="email" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="registerTel">Telefone</label>
+                  <input class="form-control" id="registerTel" type="tel"
+                    pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" required>
+                  <small class="form-text text-muted">Formato: (11) 55555-5555</small>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="registerPassword">Senha</label>
-                  <input class="form-control" id="registerPassword" type="password">
+                  <input class="form-control" id="registerPassword" type="password" required>
                 </div>
                 <div class="form-group text-center">
-                  <button class="btn btn-block btn-outline-dark" type="submit"><i class="far fa-user mr-2"></i>Registrar
+                  <button class="btn btn-block btn-outline-dark" type="button" onclick="registerValidate()"><i
+                      class="far fa-user mr-2"></i>Cadastrar
                   </button>
                 </div>
               </form>
               <hr class="my-3 hr-text letter-spacing-2" data-content="OU ENTRAR COM">
               <div class="text-center">
                 <button class="btn btn btn-outline-primary letter-spacing-0" data-toggle="tooltip"
-                  title="Entrar com o Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Entrar com o Facebook</span></button>
+                  title="Entrar com o Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Entrar com
+                    o Facebook</span></button>
                 <button class="btn btn btn-outline-muted letter-spacing-0" data-toggle="tooltip"
-                  title="Entrar com o Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Entrar com o Google </span></button>
+                  title="Entrar com o Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Entrar com o
+                    Google </span></button>
               </div>
             </div>
           </div>
