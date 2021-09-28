@@ -41,6 +41,14 @@ function registerValidate() {
         alert("A senha deve ter no mínimo 8 caracteres.");
         return false
     }
+    if (registerTel.value.length != 14 ||
+        registerTel.value.indexOf("-") <= 0 ||
+        registerTel.value.indexOf(")") <= 0) {
+
+        alert("Informe um telefone no formato correto.");
+        return false;
+    }
+
 
     alert("Usuário cadastrado com sucesso")
     clear(registerName, registerEmail, registerTel, registerPassword)
