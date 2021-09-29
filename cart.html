@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aikia E-commerce</title>
+  <!-- Custom font-->
+  <link rel="stylesheet" href="fonts/stylesheet.e9dc714d.css">
+  <!-- Theme stylesheet-->
+  <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/css/style.default.bc0dbdbe.css"
+    id="theme-stylesheet">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/favicon.png">
+  <!-- FontAwesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+  <!-- navbar-->
+  <header class="header">
+    <!-- Top Bar End-->
+    <nav class="navbar navbar-expand-lg bg-transparent border-0 shadow-0 navbar-light px-lg-5 "><a class="navbar-brand"
+        href="index.html">Aikia</a>
+      <ul class="list-inline mb-0 d-block d-lg-none">
+        <li class="list-inline-item mr-3"><a class="text-dark text-hover-primary" href="#" data-toggle="modal"
+            data-target="#loginModal">
+            <svg class="svg-icon navbar-icon">
+              <use xlink:href="#avatar-1"> </use>
+            </svg></a></li>
+        <li class="list-inline-item position-relative mr-3"><a class="text-dark text-hover-primary" href="#"
+            data-toggle="modal" data-target="#sidebarCart">
+            <svg class="svg-icon navbar-icon">
+              <use xlink:href="#retail-bag-1"> </use>
+            </svg>
+            <div class="navbar-icon-badge">5</div>
+          </a></li>
+      </ul>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="svg-icon navbar-icon">
+          <use xlink:href="#menu-hamburger-1"> </use>
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mt-3 mt-lg-0">
+          <!-- /Megamenu end-->
+        </ul>
+        <form class="d-lg-flex ml-auto mr-lg-5 mr-xl-6 my-4 my-lg-0" action="#">
+          <div class="input-group input-group-underlined">
+            <input class="form-control form-control-underlined " type="text" placeholder="Buscar"
+              aria-describedby="button-search">
+            <div class="input-group-append ml-0">
+              <button class="btn btn-underlined py-0" id="button-search" type="button">
+                <svg class="svg-icon navbar-icon">
+                  <use xlink:href="#search-1"> </use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+        <ul class="list-inline mb-0 d-none d-lg-block">
+          <li class="list-inline-item mr-3"><a class="text-dark text-hover-primary" href="#" data-toggle="modal"
+              data-target="#loginModal">
+              <svg class="svg-icon navbar-icon">
+                <use xlink:href="#avatar-1"> </use>
+              </svg></a></li>
+          <li class="list-inline-item"><a class="text-dark text-hover-primary" href="#" data-toggle="modal"
+              data-target="#sidebarRight">
+              <svg class="svg-icon navbar-icon">
+                <use xlink:href="#menu-hamburger-1"> </use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Hero Section-->
+  <section class="hero py-6">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <ol class="breadcrumb pl-0 ">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Carrinho de compras</li>
+      </ol>
+      <!-- Hero Content-->
+      <div class="hero-content">
+        <h1 class="hero-heading">Carrinho de compras</h1>
+        <div>
+          <p class="lead text-muted">Você tem 3 itens no carrinho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Shopping Cart Section-->
+  <section>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 pr-xl-5">
+          <div class="cart mb-5">
+            <div class="cart-body">
+              <!-- Product-->
+              <div class="cart-item">
+                <div class="row d-flex align-items-center text-left text-md-center">
+                  <div class="col-12 col-md-5"><a class="cart-remove close mt-3 d-md-none" href="#"><i
+                        class="fa fa-times"> </i></a>
+                    <div class="d-flex align-items-center"><a href="detail-1.html"><img class="cart-item-img"
+                          src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/product-square-ian-dooley-347968-unsplash.jpg"
+                          alt="..."></a>
+                      <div class="cart-title text-left"><a class="text-dark link-animated"
+                          href="detail-1.html"><strong>Skull Tee</strong></a><br><span class="text-muted text-sm">Size:
+                          Large</span><br><span class="text-muted text-sm">Colour: Green</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-7 mt-4 mt-md-0">
+                    <div class="row align-items-center">
+                      <div class="col-md-3">
+                        <div class="row">
+                          <div class="col-6 d-md-none text-muted">Price per item</div>
+                          <div class="col-6 col-md-12 text-right text-md-center">$65.00</div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row align-items-center">
+                          <div class="d-md-none col-7 col-sm-9 text-muted">Quantity</div>
+                          <div class="col-5 col-sm-3 col-md-12">
+                            <div class="d-flex align-items-center">
+                              <div class="btn btn-items btn-items-decrease">-</div>
+                              <input class="form-control text-center border-0 border-md input-items" type="text"
+                                value="4">
+                              <div class="btn btn-items btn-items-increase">+</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="row">
+                          <div class="col-6 d-md-none text-muted">Total price </div>
+                          <div class="col-6 col-md-12 text-right text-md-center">$260.00</div>
+                        </div>
+                      </div>
+                      <div class="col-2 d-none d-md-block text-center"><a class="cart-remove text-muted" href="#">
+                          <svg class="svg-icon w-2rem h-2rem svg-icon-light">
+                            <use xlink:href="#close-1"> </use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product-->
+              <div class="cart-item">
+                <div class="row d-flex align-items-center text-left text-md-center">
+                  <div class="col-12 col-md-5"><a class="cart-remove close mt-3 d-md-none" href="#"><i
+                        class="fa fa-times"> </i></a>
+                    <div class="d-flex align-items-center"><a href="detail-1.html"><img class="cart-item-img"
+                          src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/product-square-kyle-loftus-596319-unsplash.jpg"
+                          alt="..."></a>
+                      <div class="cart-title text-left"><a class="text-dark link-animated"
+                          href="detail-1.html"><strong>Transparent
+                            Blouse</strong></a><br><span class="text-muted text-sm">Size:
+                          Medium</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-7 mt-4 mt-md-0">
+                    <div class="row align-items-center">
+                      <div class="col-md-3">
+                        <div class="row">
+                          <div class="col-6 d-md-none text-muted">Price per item</div>
+                          <div class="col-6 col-md-12 text-right text-md-center">$55.00</div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row align-items-center">
+                          <div class="d-md-none col-7 col-sm-9 text-muted">Quantity</div>
+                          <div class="col-5 col-sm-3 col-md-12">
+                            <div class="d-flex align-items-center">
+                              <div class="btn btn-items btn-items-decrease">-</div>
+                              <input class="form-control text-center border-0 border-md input-items" type="text"
+                                value="3">
+                              <div class="btn btn-items btn-items-increase">+</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="row">
+                          <div class="col-6 d-md-none text-muted">Total price </div>
+                          <div class="col-6 col-md-12 text-right text-md-center">$165.00</div>
+                        </div>
+                      </div>
+                      <div class="col-2 d-none d-md-block text-center"><a class="cart-remove text-muted" href="#">
+                          <svg class="svg-icon w-2rem h-2rem svg-icon-light">
+                            <use xlink:href="#close-1"> </use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product-->
+              <div class="cart-item">
+                <div class="row d-flex align-items-center text-left text-md-center">
+                  <div class="col-12 col-md-5"><a class="cart-remove close mt-3 d-md-none" href="#"><i
+                        class="fa fa-times"> </i></a>
+                    <div class="d-flex align-items-center"><a href="detail-1.html"><img class="cart-item-img"
+                          src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/product-square-serrah-galos-494312-unsplash.jpg"
+                          alt="..."></a>
+                      <div class="cart-title text-left"><a class="text-dark link-animated"
+                          href="detail-1.html"><strong>White Tee</strong></a><br><span class="text-muted text-sm">Size:
+                          Medium</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-7 mt-4 mt-md-0">
+                    <div class="row align-items-center">
+                      <div class="col-md-3">
+                        <div class="row">
+                          <div class="col-6 d-md-none text-muted">Price per item</div>
+                          <div class="col-6 col-md-12 text-right text-md-center">$55.00</div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row align-items-center">
+                          <div class="d-md-none col-7 col-sm-9 text-muted">Quantity</div>
+                          <div class="col-5 col-sm-3 col-md-12">
+                            <div class="d-flex align-items-center">
+                              <div class="btn btn-items btn-items-decrease">-</div>
+                              <input class="form-control text-center border-0 border-md input-items" type="text"
+                                value="3">
+                              <div class="btn btn-items btn-items-increase">+</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="row">
+                          <div class="col-6 d-md-none text-muted">Total price </div>
+                          <div class="col-6 col-md-12 text-right text-md-center">$165.00</div>
+                        </div>
+                      </div>
+                      <div class="col-2 d-none d-md-block text-center"><a class="cart-remove text-muted" href="#">
+                          <svg class="svg-icon w-2rem h-2rem svg-icon-light">
+                            <use xlink:href="#close-1"> </use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between flex-column flex-lg-row mb-5 mb-lg-0"><a
+              class="btn btn-link text-muted" href="index.html"><i class="fa fa-chevron-left"></i>
+              Continue Comprando</a><a class="btn btn-link text-primary" href="#"><i class="fa fa-sync"></i> Recarregar
+              carrinho </a></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card mb-5">
+            <div class="card-header">
+              <h6 class="mb-0">Resumo</h6>
+            </div>
+            <div class="card-body py-4">
+              <p class="text-muted text-sm">Frete e custos adicionais são calculados baseado nos valores
+                que você colocou.</p>
+              <table class="table card-text">
+                <tr>
+                  <th class="py-4">Subtotal </th>
+                  <td class="py-4 text-right text-muted">$390.00</td>
+                </tr>
+                <tr>
+                  <th class="py-4">Frete e manuseio</th>
+                  <td class="py-4 text-right text-muted"> $10.00</td>
+                </tr>
+                <tr>
+                  <th class="py-4">Impostos</th>
+                  <td class="py-4 text-right text-muted">$0.00</td>
+                </tr>
+                <tr>
+                  <th class="pt-4">Total</th>
+                  <td class="pt-4 text-right h3 font-weight-normal">$400.00</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sidebar Modal Right-->
+  <div class="modal fade modal-right" id="sidebarRight" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button class="close close-rotate" type="button" data-dismiss="modal" aria-label="Close">
+            <svg class="svg-icon w-3rem h-3rem svg-icon-light align-middle">
+              <use xlink:href="#close-1"> </use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body px-5 pb-5">
+          <div>
+            <h5 class="mb-5" data-aos-delay="50">Aikia</h5>
+            <ul class="nav flex-column mb-5">
+              <li class="nav-item active"><a class="nav-link pl-0" href="#">Página inicial </a></li>
+              <li class="nav-item"><a class="nav-link pl-0" href="#">Link</a></li>
+            </ul>
+            <ul class="list-inline mb-4">
+              <li class="list-inline-item mr-2"><i class="fab fa-facebook-f"> </i></li>
+              <li class="list-inline-item mr-2"><i class="fab fa-twitter"> </i></li>
+              <li class="list-inline-item mr-2">
+                <svg class="svg-icon mr-2">
+                  <use xlink:href="#calls-1"> </use>
+                </svg> <a href="tel: 020-800-456-747">020-800-456-747</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login Modal    -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button class="close close-absolute" type="button" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon w-3rem h-3rem svg-icon-light align-middle">
+            <use xlink:href="#close-1"> </use>
+          </svg>
+        </button>
+        <div class="modal-body p-5">
+          <ul class="nav list-inline" role="tablist">
+            <li class="list-inline-item"><a class="nav-link nav-link-lg active" data-toggle="tab"
+                href="#loginModalTabLogin" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin"
+                aria-selected="true">Entrar</a></li>
+            <li class="list-inline-item"><a class="nav-link nav-link-lg" data-toggle="tab" href="#loginModalTabRegister"
+                role="tab" id="loginModalLinkRegister" aria-controls="loginModalTabRegister"
+                aria-selected="false">Cadastrar</a></li>
+          </ul>
+          <hr class="mb-3">
+          <div class="tab-content">
+            <div class="tab-pane active fade show px-3" id="loginModalTabLogin" role="tabpanel"
+              aria-labelledby="loginModalLinkLogin">
+              <form action="customer-orders.html" method="get">
+                <div class="form-group">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-control" id="email" type="email">
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col">
+                      <label class="form-label" for="loginPassword"> Senha</label>
+                    </div>
+                    <div class="col-auto"><a class="form-text small" href="#">Esqueceu sua
+                        senha?</a></div>
+                  </div>
+                  <input class="form-control" name="loginPassword" id="loginPassword" placeholder="Password"
+                    type="password" required data-msg="Please enter your password">
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="loginRemember" type="checkbox">
+                    <label class="custom-control-label text-muted" for="loginRemember"> <span class="text-sm">Lembrar
+                        de
+                        mim neste computador</span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-block btn-outline-dark" type="button" onclick="loginValidate()"><i
+                      class="fa fa-sign-in-alt mr-2"></i>
+                    Entrar</button>
+                </div>
+              </form>
+              <hr class="my-3 hr-text letter-spacing-2" data-content="OU">
+              <div class="text-center">
+                <button class="btn btn btn-outline-primary letter-spacing-0" data-toggle="tooltip"
+                  title="Entrar com o Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Entrar
+                    com
+                    o Facebook</span></button>
+                <button class="btn btn btn-outline-muted letter-spacing-0" data-toggle="tooltip"
+                  title="Entrar com o Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Entrar com o
+                    Google</span></button>
+              </div>
+            </div>
+            <div class="tab-pane fade px-3" id="loginModalTabRegister" role="tabpanel"
+              aria-labelledby="loginModalLinkRegister">
+              <form action="customer-orders.html" method="get">
+                <div class="form-group">
+                  <label class="form-label" for="registerName">Nome</label>
+                  <input class="form-control" id="registerName" type="text" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email</label>
+                  <input class="form-control" id="registerEmail" type="email" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="registerTel">Telefone</label>
+                  <input class="form-control" id="registerTel" type="tel" required>
+                  <small class="form-text text-muted">Formato: (11)55555-5555</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="registerPassword">Senha</label>
+                  <input class="form-control" id="registerPassword" type="password" required>
+                </div>
+                <div class="form-group text-center">
+                  <button class="btn btn-block btn-outline-dark" type="button" onclick="registerValidate()"><i
+                      class="far fa-user mr-2"></i>Cadastrar
+                  </button>
+                </div>
+              </form>
+              <hr class="my-3 hr-text letter-spacing-2" data-content="OU ENTRAR COM">
+              <div class="text-center">
+                <button class="btn btn btn-outline-primary letter-spacing-0" data-toggle="tooltip"
+                  title="Entrar com o Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Entrar
+                    com
+                    o Facebook</span></button>
+                <button class="btn btn btn-outline-muted letter-spacing-0" data-toggle="tooltip"
+                  title="Entrar com o Google"><i class="fa-fw fa-google fab"></i><span class="sr-only">Entrar com o
+                    Google </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer-->
+  <footer>
+    <div class="py-5 py-lg-6 bg-gray-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#delivery-time-1"> </use>
+            </svg>
+            <div class="service-text">
+              <h6 class="text-sm mb-1">Frete grátis &amp; devolução</h6>
+              <p class="text-muted font-weight-light text-sm mb-0">Frete grátis em compras acima de
+                R$300
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#money-1"> </use>
+            </svg>
+            <div class="service-text">
+              <h6 class="text-sm mb-1">Compra segura</h6>
+              <p class="text-muted font-weight-light text-sm mb-0">30 dias de garantia e seu dinheiro
+                de
+                volta</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#special-price-1"> </use>
+            </svg>
+            <div>
+              <h6 class="text-sm mb-1">Preço bom é aqui</h6>
+              <p class="text-muted font-weight-light text-sm mb-0">As melhores ofertas para você</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 py-4 service-column">
+            <svg class="svg-icon service-icon">
+              <use xlink:href="#customer-support-1"> </use>
+            </svg>
+            <div class="service-text">
+              <h6 class="text-sm mb-1">Atendimento 24 horas</h6>
+              <p class="text-muted font-weight-light text-sm mb-0">Liga para nossa central:
+                020-800-456-747</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main block - menus, subscribe form-->
+    <div class="py-6 text-muted">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 pr-lg-5 pr-xl-6 mb-5 mb-lg-0">
+            <h6 class="text-dark letter-spacing-1 mb-4">Fale conosco</h6>
+            <p class="text-sm mb-3"> Ainda com dúvidas? Utilize nosso canal de atendimento.</p>
+            <form action="#" id="newsletter-form">
+              <div class="input-group input-group-underlined mb-3">
+                <input class="form-control form-control-underlined" type="email" placeholder="Seu endereço de Email"
+                  aria-label="Your Email Address">
+                <div class="input-group-append ml-0">
+                  <button class="btn btn-underlined text-gray-700 py-0" type="button">
+                    <svg class="svg-icon w-2rem h-2rem">
+                      <use xlink:href="#envelope-1"> </use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="text-sm mb-3"><br>Confira como trabalhamos através da nossa <a href="#">política de
+                    privacidade.</a></p>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-lg-4"><a class="d-lg-none block-toggler my-3" data-toggle="collapse" href="#footerMenu0"
+                  aria-expanded="false" aria-controls="footerMenu0">Shop<span class="block-toggler-icon"></span></a>
+                <!-- Footer collapsible menu-->
+                <div class="expand-lg collapse" id="footerMenu0">
+                  <h6 class="text-dark letter-spacing-1 mb-4 d-none d-lg-block">Compre</h6>
+                  <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Sala</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Quartos</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Cozinha</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Escritório</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Banheiro</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4"><a class="d-lg-none block-toggler my-3" data-toggle="collapse" href="#footerMenu1"
+                  aria-expanded="false" aria-controls="footerMenu1">Company<span class="block-toggler-icon"></span></a>
+                <!-- Footer collapsible menu-->
+                <div class="expand-lg collapse" id="footerMenu1">
+                  <h6 class="text-dark letter-spacing-1 mb-4 d-none d-lg-block">Aikia</h6>
+                  <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Sobre nós</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Aikia perto de
+                        você</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Como
+                        trabalhamos</a>
+                    </li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Formas de
+                        pagamento</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Siga a Aikia</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4"><a class="d-lg-none block-toggler my-3" data-toggle="collapse" href="#footerMenu2"
+                  aria-expanded="false" aria-controls="footerMenu2">Your
+                  account<span class="block-toggler-icon"></span></a>
+                <!-- Footer collapsible menu-->
+                <div class="expand-lg collapse" id="footerMenu2">
+                  <h6 class="text-dark letter-spacing-1 mb-4 d-none d-lg-block">Sua conta</h6>
+                  <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Login</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Registro</a></li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Lista de desejo</a>
+                    </li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Nossos produtos</a>
+                    </li>
+                    <li class="mb-2"> <a class="text-muted text-hover-dark link-animated" href="#">Carrinho</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright section of the footer-->
+    <div class="py-4 font-weight-light text-muted">
+      <div class="container">
+        <div class="row align-items-center text-sm text-gray-500">
+          <div class="col-lg-4 text-center text-lg-left">
+            <p class="mb-lg-0">&copy; 2021 Aikia. Todos os direitos reservados.</p>
+          </div>
+          <div class="col-lg-8">
+            <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-lg-right">
+              <li class="list-inline-item"> <a class="text-reset" href="#">Termos e condições </a>
+              </li>
+              <li class="list-inline-item"> <a class="text-reset" href="#">Privacidade e cookies </a>
+              </li>
+              <li class="list-inline-item"> <a class="text-reset" href="#">Acessibilidade</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer end-->
+  <!-- JavaScript files-->
+  <script src="script.js"></script>
+  <!-- jQuery-->
+  <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap Bundle -->
+  <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/vendor/bootstrap/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+
+</html>
