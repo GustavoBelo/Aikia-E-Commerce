@@ -25,6 +25,15 @@ var options = {
     navbarExpandPx: 992
 }
 
+$(document).ready(function () {
+    $("#searchItems").keyup(function () {
+        var value = $(this).val().toLowerCase();
+        $("#items li").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+
 function registerValidate() {
     if (registerName.value.length <= 3) {
         alert("Informe um nome válido.");
