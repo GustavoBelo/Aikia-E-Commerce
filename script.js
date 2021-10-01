@@ -34,6 +34,40 @@ $(document).ready(function () {
     });
 });
 
+function clear(n1, n2, n3, n4) {
+    if (n3 && n4) {
+        n3.focus()
+        n4.focus()
+
+        n3.value = ""
+        n4.value = ""
+    } else if (n2) {
+        n2.focus()
+
+        n2.value = ""
+    }
+
+    n1.focus()
+
+    n1.value = ""
+}
+
+function loginValidate() {
+    if (email.value.length < 6 ||
+        email.value.indexOf("@") <= 0 ||
+        email.value.lastIndexOf(".") <= email.value.indexOf("@")) {
+        alert("Este email não está cadastrado no sistema.");
+        return false;
+    }
+    if (loginPassword.value.length < 8) {
+        alert("Senha incorreta.")
+        return false
+    }
+
+    alert("Você entrou.")
+    clear(email, loginPassword)
+}
+
 function registerValidate() {
     if (registerName.value.length <= 3) {
         alert("Informe um nome válido.");
@@ -63,34 +97,14 @@ function registerValidate() {
     clear(registerName, registerEmail, registerTel, registerPassword)
 }
 
-function loginValidate() {
-    if (email.value.length < 6 ||
-        email.value.indexOf("@") <= 0 ||
-        email.value.lastIndexOf(".") <= email.value.indexOf("@")) {
-        alert("Este email não está cadastrado no sistema.");
+function forgottenPassword() {
+    if (recoverEmail.value.length < 6 ||
+        recoverEmail.value.indexOf("@") <= 0 ||
+        recoverEmail.value.lastIndexOf(".") <= recoverEmail.value.indexOf("@")) {
+        alert("informe um email válido.");
         return false;
     }
-    if (loginPassword.value.length < 8) {
-        alert("Senha incorreta.")
-        return false
-    }
 
-    alert("Você entrou.")
-    clear(email, loginPassword)
-}
-
-function clear(n1, n2, n3, n4) {
-    n1.focus()
-    n2.focus()
-
-    n1.value = ""
-    n2.value = ""
-
-    if (n3 && n4) {
-        n1.focus()
-        n2.focus()
-
-        n3.value = ""
-        n4.value = ""
-    }
+    alert("Email de recuperação enviado com sucesso.")
+    clear(recoverEmail)
 }
