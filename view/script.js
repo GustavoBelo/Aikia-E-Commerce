@@ -6,7 +6,7 @@ function injectSvgSprite(path) {
     var ajax = new XMLHttpRequest();
     ajax.open("GET", path, true);
     ajax.send();
-    ajax.onload = function (e) {
+    ajax.onload = function(e) {
         var div = document.createElement("div");
         div.className = 'd-none';
         div.innerHTML = ajax.responseText;
@@ -25,10 +25,10 @@ var options = {
     navbarExpandPx: 992
 }
 
-$(document).ready(function () {
-    $("#searchItems").keyup(function () {
+$(document).ready(function() {
+    $("#searchItems").keyup(function() {
         var value = $(this).val().toLowerCase();
-        $("#items li").filter(function () {
+        $("#items li").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
@@ -92,9 +92,7 @@ function registerValidate() {
         return false;
     }
 
-
-    alert("Usuário cadastrado com sucesso")
-    clear(registerName, registerEmail, registerTel, registerPassword)
+    document.getElementById("registerForm").submit()
 }
 
 function forgottenPassword() {
