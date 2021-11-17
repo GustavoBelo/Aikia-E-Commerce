@@ -252,7 +252,13 @@
     <!-- Sidebar Modal Right-->
     <?php include'../controller/sidebarRight/sidebarModal.php' ?>
     <!-- Login Modal    -->
-    <?php include'../controller/login/loginModal.php' ?>
+    <?php 
+        if(isset($_SESSION["nome"])) {
+            include'../controller/loginModal/loggedLoginModal.php';
+        } else {
+            include'../controller/loginModal/loginModal.php';
+        } 
+    ?>
     <!-- Footer-->
     <?php include'footer/footer.php' ?>
     <!-- jQuery-->

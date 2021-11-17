@@ -56,16 +56,15 @@ function loginValidate() {
     if (email.value.length < 6 ||
         email.value.indexOf("@") <= 0 ||
         email.value.lastIndexOf(".") <= email.value.indexOf("@")) {
-        alert("Este email não está cadastrado no sistema.");
+        alert("Email inválido.");
         return false;
     }
     if (loginPassword.value.length < 8) {
-        alert("Senha incorreta.")
+        alert("Senha inválida.")
         return false
     }
 
-    alert("Você entrou.")
-    clear(email, loginPassword)
+    document.getElementById("loginForm").submit()
 }
 
 function registerValidate() {
@@ -105,4 +104,31 @@ function forgottenPassword() {
 
     alert("Email de recuperação enviado com sucesso.")
     clear(recoverEmail)
+}
+
+function updateFormFunc() {
+    if (newName.value.length <= 3) {
+        alert("Informe um nome válido.");
+        return false;
+    }
+    // a@a.com
+    if (newEmail.value.length < 6 ||
+        newEmail.value.indexOf("@") <= 0 ||
+        newEmail.value.lastIndexOf(".") <= newEmail.value.indexOf("@")) {
+        alert("informe um email válido.");
+        return false;
+    }
+    if (newPassword.value.length < 8) {
+        alert("A senha deve ter no mínimo 8 caracteres.");
+        return false
+    }
+    if (newTel.value.length != 14 ||
+        newTel.value.indexOf("-") <= 0 ||
+        newTel.value.indexOf(")") <= 0) {
+
+        alert("Informe um telefone no formato correto.");
+        return false;
+    }
+
+    document.getElementById("updateForm").submit()
 }

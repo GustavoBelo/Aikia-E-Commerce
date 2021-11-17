@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
+<?php session_start(); ?>
+
 <body>
     <!-- navbar-->
     <?php include'header/header.php'?>
@@ -430,7 +432,13 @@
     <!-- Sidebar Modal Right-->
     <?php include'../controller/sidebarRight/sidebarModal.php' ?>
     <!-- Login Modal    -->
-    <?php include'../controller/login/loginModal.php' ?>
+    <?php 
+        if(isset($_SESSION["nome"])) {
+            include'../controller/loginModal/loggedLoginModal.php';
+        } else {
+            include'../controller/loginModal/loginModal.php';
+        } 
+    ?>
     <!-- Footer-->
     <?php include'footer/footer.php' ?>
     <!-- jQuery-->
