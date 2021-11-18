@@ -2,7 +2,7 @@
 <script>
     function updateUser() {
         alert("Usuário alterado com Sucesso! :P \nPor questões de segurança, faça novamente login com seus novos dados");
-        window.location.href = "../../../view/index.php";
+        window.location.href = "../../view/main/index.php";
     }
 </script>
 <?php

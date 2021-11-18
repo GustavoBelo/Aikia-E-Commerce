@@ -17,9 +17,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
+<?php session_start(); ?>
+
 <body>
     <!-- navbar-->
-    <?php include'header/header.php'?>
+    <?php include'../header/header.php'?>
     <!-- Hero Section-->
     <div class="container">
         <!-- Breadcrumbs -->
@@ -250,24 +252,24 @@
         </div>
     </section>
     <!-- Sidebar Modal Right-->
-    <?php include'../controller/sidebarRight/sidebarModal.php' ?>
+    <?php include'../sidebarRight/sidebarModal.php' ?>
     <!-- Login Modal    -->
     <?php 
         if(isset($_SESSION["nome"])) {
-            include'../controller/loginModal/loggedLoginModal.php';
+            include'../loginModal/loggedLoginModal.php';
         } else {
-            include'../controller/loginModal/loginModal.php';
+            include'../loginModal/loginModal.php';
         } 
     ?>
     <!-- Footer-->
-    <?php include'footer/footer.php' ?>
+    <?php include'../footer/footer.php' ?>
     <!-- jQuery-->
     <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/vendor/jquery/jquery.min.js"></script>
     <!-- Bootstrap Bundle -->
     <script src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/vendor/bootstrap/js/bootstrap.bundle.min.js">
     </script>
     <!-- JavaScript files-->
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 
 </body>
 

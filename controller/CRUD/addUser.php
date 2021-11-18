@@ -2,7 +2,7 @@
 <script>
     function login() {
         alert("Usuário adicionado com Sucesso!\nAgora você pode fazer o login :D");
-        window.location.href = "../../../view/index.php";
+        window.location.href = "../../view/main/index.php";
     }
 </script>
 <?php

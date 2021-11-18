@@ -1,7 +1,7 @@
 <script>
     function invalidLogin() {
         alert("Email ou senha inválido");
-        window.location.href = "../../../view/index.php"
+        window.location.href = "../../view/main/index.php"
     }
 </script>
 
@@ -23,8 +23,8 @@
             $_SESSION["email"] = $reg["email"]; 
             $_SESSION["codigo "] = $reg["codigo"];
             $_SESSION["telefone"] = $reg["telefone"];
-
-            header("location: ../../../view/index.php");
+            
+            header("location: ../../view/main/index.php");
         } else {
             echo "<script>invalidLogin()</script>";
         }

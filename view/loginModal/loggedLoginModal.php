@@ -45,7 +45,7 @@
                         </div>
                         <div class="tab-pane fade px-3" id="loginModalTabRegister" role="tabpanel"
                             aria-labelledby="loginModalLinkRegister">
-                            <form action="../controller/loginModal/register/update.php" method="post" id="updateForm">
+                            <form action="../../controller/CRUD/update.php" method="post" id="updateForm">
                                 <div class="form-group">
                                     <label class="form-label" for="newName">Nome</label>
                                     <input class="form-control" id="newName" name="newName" type="text" value="<?php echo "$nome" ?>" required>

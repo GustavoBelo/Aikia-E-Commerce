@@ -23,7 +23,7 @@
                     <div class="tab-content">
                         <div class="tab-pane active fade show px-3" id="loginModalTabLogin" role="tabpanel"
                             aria-labelledby="loginModalLinkLogin">
-                            <form action="../controller/loginModal/login/login.php" method="post" id="loginForm">
+                            <form action="../../controller/login/login.php" method="post" id="loginForm">
                                 <div class="form-group">
                                     <label class="form-label" for="email">Email</label>
                                     <input class="form-control" id="email" name="email" type="email">
@@ -68,7 +68,7 @@
                         </div>
                         <div class="tab-pane fade px-3" id="loginModalTabRegister" role="tabpanel"
                             aria-labelledby="loginModalLinkRegister">
-                            <form method="post" action="../controller/loginModal/register/addUser.php" id="registerForm">
+                            <form method="post" action="../../controller/CRUD/addUser.php" id="registerForm">
                                 <div class="form-group">
                                     <label class="form-label" for="registerName">Nome</label>
                                     <input class="form-control" id="registerName" name="registerName" type="text" required>

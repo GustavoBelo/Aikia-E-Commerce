@@ -129,7 +129,7 @@
                 <div class="modal-footer sidebar-cart-footer shadow">
                     <div class="w-100">
                         <h5 class="mb-4">Subtotal: <span class="float-right">R$749.86</span></h5><a
-                            class="btn btn-outline-dark btn-block mb-3" href="cart.php">Ver carrinho</a><a
+                            class="btn btn-outline-dark btn-block mb-3" href="../main/cart.php">Ver carrinho</a><a
                             class="btn btn-dark btn-block" href="checkout.html">Finalizar compra</a>
                     </div>
                 </div>
