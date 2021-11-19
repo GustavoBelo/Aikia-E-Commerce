@@ -36,7 +36,7 @@
                 <br>
                 <div class="form-group">
                     <button class="btn btn-block btn-outline-dark" type="button"
-                        onclick="updatePasswordForm()"><i class="far fa-user mr-2"></i>Alterar
+                        onclick="updatePasswordForm()"><i class="far fa-user mr-2"></i>Redefinir senha
                     </button>
                 </div>
             </form>
