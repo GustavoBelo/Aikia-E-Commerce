@@ -8,14 +8,21 @@
 <?php
     updatePHP();
     function updatePHP() {
+        $oldEmail = $_POST["oldEmail"];
+        $senha = $_POST["newPassword"];
+
         $nome = $_POST["newName"];
         $email = $_POST["newEmail"];
         $telefone = $_POST["newTel"];
-        $senha = $_POST["newPassword"];
+        
         $con = new mysqli("localhost", "root", "", "p2");
+
         if($nome && $email && $telefone && $senha){
             $sql = "update usuario set nome ='$nome', email ='$email', telefone = '$telefone', senha = md5('$senha') where email = '$email'";
+        } else if($senha && $oldEmail) {
+            $sql = "update usuario set senha = md5('$senha') where email = '$oldEmail'";
         }
+
         if(mysqli_query($con, $sql)) {
             echo "<script>", "updateUser();", "</script>";
         } else {

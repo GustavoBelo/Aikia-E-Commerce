@@ -107,13 +107,13 @@
                                         class="sr-only">Entrar com o
                                         Google </span></button>
                             </div>
-                        </div>
+                        </div> 
                         <div class="tab-pane fade px-3" id="loginModalTabForgottenPassword" role="tabpanel"
                             aria-labelledby="loginModalLinkForgottenPassword">
-                            <form action="customer-orders.html" method="get">
+                            <form action="../../model/email.php" method="post" id="forgottenPasswordForm">
                                 <div class="form-group">
                                     <label class="form-label">Email</label>
-                                    <input class="form-control" id="recoverEmail" type="email" required>
+                                    <input class="form-control" id="recoverEmail" name="recoverEmail" type="email" required>
                                 </div>
                                 <div class="form-group text-center">
                                     <button class="btn btn-block btn-outline-dark" type="button"

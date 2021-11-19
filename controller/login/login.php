@@ -15,7 +15,7 @@
         if ($email && $senha){
             $sql = "select * from usuario where email='$email' and senha=md5('$senha')";
         } else echo "Não recebemos o email ou a senha."; 
-
+ 
         $return = mysqli_query($con, $sql);
         if($reg = mysqli_fetch_array($return)){
             session_start();

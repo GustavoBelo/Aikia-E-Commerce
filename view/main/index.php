@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
-<?php session_start(); ?>
+<?php 
+    session_start();
+?>
 
 <body>
     <!-- navbar-->

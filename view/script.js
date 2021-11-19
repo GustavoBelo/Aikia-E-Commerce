@@ -116,8 +116,7 @@ function forgottenPassword() {
         return false;
     }
 
-    alert("Email de recuperação enviado com sucesso.")
-    clear(recoverEmail)
+    document.getElementById("forgottenPasswordForm").submit()
 }
 
 function updateFormFunc() {
@@ -146,3 +145,26 @@ function updateFormFunc() {
 
     document.getElementById("updateForm").submit()
 }
+
+function updatePasswordForm() {
+    if (newPassword.value.length < 8) {
+        alert("A senha deve ter no mínimo 8 caracteres.");
+        return false
+    }
+
+    document.getElementById("updatePasswordForm").submit()
+}
+
+// olho da senha
+document.getElementById('olho').addEventListener('mousedown', function() {
+    document.getElementById('newPassword').type = 'text';
+});
+
+document.getElementById('olho').addEventListener('mouseup', function() {
+    document.getElementById('newPassword').type = 'password';
+});
+
+// Para que o password não fique exposto apos mover a imagem.
+document.getElementById('olho').addEventListener('mousemove', function() {
+    document.getElementById('newPassword').type = 'password';
+});
