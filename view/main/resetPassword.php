@@ -20,6 +20,7 @@
     ?>
     <body>
         <div style="width: 80%; margin-left: 10%; margin-top: 5%;">
+            <h1 style="text-align: center;"><a href="index.php">Aikia</a></h1>
             <form action="../../controller/CRUD/update.php" method="post" id="updatePasswordForm">
                 <div class="form-group">
                     <label class="form-label">Email</label>
