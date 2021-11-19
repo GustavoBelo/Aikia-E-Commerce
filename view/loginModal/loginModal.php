@@ -31,12 +31,14 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col">
-                                            <label class="form-label" for="loginPassword"> Senha</label>
+                                            <label class="form-label"> Senha</label>
                                         </div>
                                     </div>
                                     <input class="form-control" name="loginPassword" id="loginPassword"
                                         placeholder="Password" type="password" required
-                                        data-msg="Please enter your password">
+                                        data-msg="Please enter your password" style="float: left; width: 88%">
+                                    &nbsp;
+                                    <img id="olho" src="../../images/eye.png"/>
                                 </div>
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox">

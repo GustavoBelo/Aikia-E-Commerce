@@ -67,6 +67,20 @@ function loginValidate() {
     document.getElementById("loginForm").submit()
 }
 
+// olho da senha
+document.getElementById('olho').addEventListener('mousedown', function() {
+    document.getElementById('loginPassword').type = 'text';
+});
+
+document.getElementById('olho').addEventListener('mouseup', function() {
+    document.getElementById('loginPassword').type = 'password';
+});
+
+// Para que o password não fique exposto apos mover a imagem.
+document.getElementById('olho').addEventListener('mousemove', function() {
+    document.getElementById('loginPassword').type = 'password';
+});
+
 function registerValidate() {
     if (registerName.value.length <= 3) {
         alert("Informe um nome válido.");
