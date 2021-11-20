@@ -54,8 +54,8 @@
                     </div>
                     <div class='position-relative'>
                         <h3 class='text-base mb-1'><a class='text-dark' href='detail-1.html'>$titulo</a></h3>
-                        <span class='text-gray-800 text-sm'>$valor</span><br><span
-                        class='text-gray-500 text-sm'><del>$desconto</del></span>
+                        <span class='text-gray-800 text-sm'>R$$valor</span><br><span
+                        class='text-gray-500 text-sm'><del>".($desconto ? 'R$'.$desconto.'' : '' )."</del></span>
                         <div class='product-stars text-xs'><i class='fa fa-star text-primary'></i><i
                                 class='fa fa-star text-primary'></i><i
                                 class='fa fa-star text-primary'></i><i
