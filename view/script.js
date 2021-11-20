@@ -34,24 +34,6 @@ $(document).ready(function() {
     });
 });
 
-function clear(n1, n2, n3, n4) {
-    if (n3 && n4) {
-        n3.focus()
-        n4.focus()
-
-        n3.value = ""
-        n4.value = ""
-    } else if (n2) {
-        n2.focus()
-
-        n2.value = ""
-    }
-
-    n1.focus()
-
-    n1.value = ""
-}
-
 function loginValidate() {
     if (email.value.length < 6 ||
         email.value.indexOf("@") <= 0 ||

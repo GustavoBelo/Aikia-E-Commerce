@@ -19,8 +19,10 @@
 
 <?php 
     session_start();
-    include '../../controller/CRUD/produto/listaProduto.php';
 ?>
+
+<!-- Product list -->
+<?php include'../../controller/CRUD/produto/listaProduto.php'; ?>
 
 <body>
     <!-- navbar-->
@@ -229,6 +231,7 @@
         if(isset($_SESSION["nome"])) {
             include'../loginModal/loggedLoginModal.php';
         } else {
+            $_SESSION["pagina"] = "1";
             include'../loginModal/loginModal.php';
         } 
     ?>

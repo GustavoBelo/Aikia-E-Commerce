@@ -1,9 +1,4 @@
-<script>
-    function invalidLogin() {
-        alert("Email ou senha inválido");
-        window.location.href = "../../view/main/index.php"
-    }
-</script>
+<script src="script.js"></script>
 
 <?php
     doLogin();
@@ -19,12 +14,16 @@
         $return = mysqli_query($con, $sql);
         if($reg = mysqli_fetch_array($return)){
             session_start();
+            $_SESSION["codigo"] = $reg["codigo"];
             $_SESSION["nome"] = $reg["nome"];
-            $_SESSION["email"] = $reg["email"]; 
-            $_SESSION["codigo "] = $reg["codigo"];
+            $_SESSION["email"] = $reg["email"];
             $_SESSION["telefone"] = $reg["telefone"];
             
-            header("location: ../../view/main/index.php");
+            if($_SESSION["pagina"] == "1") 
+                header("location: ../../view/main/index.php"); 
+            else 
+                header("location: ../../view/main/cart.php");
+            
         } else {
             echo "<script>invalidLogin()</script>";
         }

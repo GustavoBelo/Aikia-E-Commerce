@@ -258,6 +258,7 @@
         if(isset($_SESSION["nome"])) {
             include'../loginModal/loggedLoginModal.php';
         } else {
+            $_SESSION["pagina"] = "2";
             include'../loginModal/loginModal.php';
         } 
     ?>
