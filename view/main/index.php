@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
-<?php 
-    session_start();
-?>
+<?php session_start(); ?>
 
 <!-- Product list -->
 <?php include'../../controller/CRUD/produto/listaProduto.php'; ?>
+<!-- Quickview Modal    -->
+<?php include'../../controller/CRUD/produto/quickViewModal.php' ?>
 
 <body>
     <!-- navbar-->
@@ -152,74 +152,7 @@
                 </div>
             </div>
             <!-- Quickview Modal    -->
-            <div class="modal fade quickview" id="quickView" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document">
-                    <div class="modal-content">
-                        <button class="close close-absolute close-rotate" type="button" data-dismiss="modal"
-                            aria-label="Close">
-                            <svg class="svg-icon w-3rem h-3rem svg-icon-light align-middle">
-                                <use xlink:href="#close-1"> </use>
-                            </svg>
-                        </button>
-                        <div class="modal-body quickview-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="detail-carousel">
-                                        <div class="product-badge badge badge-primary">Novo</div>
-                                        <div class="product-badge badge badge-dark">Últimas unidades</div>
-                                        <center>
-                                            <img class="img-fluid home-slider-image"
-                                                src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair2-transparent.png"
-                                                alt="" data-swiper-parallax="-200">
-                                        </center>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 p-lg-5">
-                                    <h2 class="mb-4 mt-4 mt-lg-1">Cadeira Eames Branca</h2>
-                                    <div
-                                        class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-between mb-4">
-                                        <ul class="list-inline mb-2 mb-sm-0">
-                                            <li class="list-inline-item h4 font-weight-light mb-0">R$160.00</li>
-                                            <li class="list-inline-item text-muted font-weight-light">
-                                                <del>R$229.99</del>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p class="mb-4 text-muted">Inspirada no clássico do design mundial assinado pelo
-                                        icônico casal de
-                                        designers norte-americanos Charles e Ray Eames, a cadeira Eames Wood mostra o
-                                        perfeito equilíbrio
-                                        entre formas, ergonomia e volumes dos móveis das décadas de 1940 e 1950.
-                                        Confortável e com desenho
-                                        atemporal, ela é desenvolvida em polipropileno, madeira maciça Faia com
-                                        aplicação de verniz
-                                        poliuretano e perfil de aço com pintura epóxi-pó; materiais e acabamentos que
-                                        atestam a sua
-                                        resistência.</p>
-                                    <form id="buyForm_modal" action="#">
-                                        <div class="input-group w-100 mb-4">
-                                            <input class="form-control detail-quantity" name="items" type="number"
-                                                value="1">
-                                            <div class="input-group-append flex-grow-1">
-                                                <button class="btn btn-dark btn-block" type="submit"> <i
-                                                        class="fa fa-shopping-cart mr-1"></i>Adicionar ao
-                                                    carrinho</button>
-                                            </div>
-                                        </div>
-                                        <ul class="list-unstyled">
-                                            <li><strong>Categoria:</strong> <a class="text-muted" href="#">Cadeiras</a>
-                                            </li>
-                                            <li><strong>Tags:</strong> <a class="text-muted" href="#">Ergonomia</a>, <a
-                                                    class="text-muted" href="#">Elegancia</a></li>
-                                        </ul>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php detalhaProduto()?>
         </div>
     </div>
     <!-- Sidebar Cart Modal-->

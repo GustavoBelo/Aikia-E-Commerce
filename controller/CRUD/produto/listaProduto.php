@@ -1,28 +1,19 @@
 <?php 
     function listarProdutos(){
-        if(isset($_POST["bt1"])){
-            $busca = $_POST["busca"];
-            $sql = "select * from produto where titulo like '%$busca%' order by titulo";	
-        } else {
-            $sql = "select * from produto order by codigo";
-        }
+        $sql = "select * from produto order by codigo";
         $con = new mysqli("localhost", "root", "", "p2");
         $retorno = mysqli_query($con, $sql);	
+
         while($reg = mysqli_fetch_array($retorno)){
-            // $codigo = $reg["codigo"];
+            $codigo = $reg["codigo"];
             $titulo	= $reg["titulo"];
 
             if($reg["badge"]) $badge = $reg["badge"]; else $badge = ""; 
 
-            // $descritivo	= $reg["descritivo"];
             $foto	= $reg["foto"];
-            // $quantidade = $reg["quantidade"];
             $valor = $reg["valor"];
 
             if($reg["desconto"]) $desconto = $reg["desconto"]; else $desconto = ""; 
-
-            // $categoria = $reg["categoria"];	
-            // $tags = $reg["tags"];		
             
             echo 
             "<li class='list-group-item col-xl-3 col-lg-4 col-6 flex-fill'>
@@ -44,7 +35,7 @@
                             </a>
                             <a
                                 class='text-dark text-hover-primary text-decoration-none' href='#'
-                                data-toggle='modal' data-target='#quickView'>
+                                data-toggle='modal' data-target='#quickView$codigo'>
                                 <svg class='svg-icon svg-icon-heavy'>
                                     <use xlink:href='#expand-1'> </use>
                                 </svg>
@@ -54,8 +45,8 @@
                     </div>
                     <div class='position-relative'>
                         <h3 class='text-base mb-1'><a class='text-dark' href='detail-1.html'>$titulo</a></h3>
-                        <span class='text-gray-800 text-sm'>R$$valor</span><br><span
-                        class='text-gray-500 text-sm'><del>".($desconto ? 'R$'.$desconto.'' : '' )."</del></span>
+                        <span class='text-gray-800 text-sm'>R$".number_format($valor, 2, '.', '')."</span><br><span
+                        class='text-gray-500 text-sm'><del>".($desconto ? 'R$'.number_format($desconto, 2, '.', '').'' : '' )."</del></span>
                         <div class='product-stars text-xs'><i class='fa fa-star text-primary'></i><i
                                 class='fa fa-star text-primary'></i><i
                                 class='fa fa-star text-primary'></i><i
