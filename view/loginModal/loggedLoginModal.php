@@ -4,13 +4,6 @@
     $telefone = $_SESSION["telefone"];
 ?>
 
-<script>
-    function logout() {
-        <?php session_destroy()?> 
-        window.location.reload()
-    }
-</script>
-
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -39,7 +32,7 @@
                                 <label class="form-label" >Telefone: <?php echo "$telefone" ?> </label><br>
                             </div>
                             <button class="btn btn-block btn-outline-dark" type="button"
-                                        onclick="logout()"
+                                        onclick="location.href='../../controller/login/logout.php'"
                                         ><i class="fa fa-sign-in-alt mr-2"></i>
                                         Sair</button>
                         </div>
