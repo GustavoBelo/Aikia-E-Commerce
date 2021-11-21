@@ -22,7 +22,9 @@
 <!-- Product list -->
 <?php include'../../controller/CRUD/produto/listaProduto.php'; ?>
 <!-- Quickview Modal    -->
-<?php include'../../controller/CRUD/produto/quickViewModal.php' ?>
+<?php include'../../controller/CRUD/produto/quickViewModal.php'; ?>
+ <!-- Preview Cart -->
+<?php include'../../controller/CRUD/produto/cesta/inlcluirCesta.php'; ?>
 
 <body>
     <!-- navbar-->

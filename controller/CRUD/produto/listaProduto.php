@@ -23,7 +23,7 @@
                         <img class='img-fluid'
                             src='$foto'
                             alt='product'/>
-                        <div class='product-hover-overlay'><a class='text-dark text-sm' href='#'>
+                        <div class='product-hover-overlay'><a class='text-dark text-sm' href='../../controller/CRUD/produto/cesta/adicionarAoCarrinho.php?codigo=$codigo'>
                             <svg class='svg-icon text-hover-primary svg-icon-heavy d-sm-none'>
                                 <use xlink:href='#retail-bag-1'> </use>
                             </svg><span class='d-none d-sm-inline'>Adicionar ao carrinho</span></a>
