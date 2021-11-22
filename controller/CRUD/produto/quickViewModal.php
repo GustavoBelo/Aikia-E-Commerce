@@ -59,8 +59,8 @@
                                     <p class='mb-4 text-muted'>$descritivo</p>
                                     <form id='buyForm_modal' action='#'>
                                         <div class='input-group w-100 mb-4'>
-                                            <input class='form-control detail-quantity' name='items' type='number'
-                                                value='$quantidade'>
+                                            <input class='form-control detail-quantity' name='items' 
+                                                value='$quantidade' disabled>
                                             <div class='input-group-append flex-grow-1'>
                                                 <button class='btn btn-dark btn-block' type='submit'> <i
                                                         class='fa fa-shopping-cart mr-1'></i>Adicionar ao

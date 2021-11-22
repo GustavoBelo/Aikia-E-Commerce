@@ -13,7 +13,14 @@
         $telefone = $_POST["registerTel"];
         $senha = $_POST["registerPassword"];
         $con = new mysqli("localhost", "root", "", "p2");
-        if($nome && $email && $telefone && $senha){
+        if($nome && $email && $telefone && $senha) {
+            $allUsers = "select * from usuario user where user.email='$email'";
+            $result = mysqli_query($con ,$allUsers);
+            if (mysqli_num_rows($result)>0) {
+                echo "<script>alert('Email já cadastrado, tente logar! :D.');</script>"; 
+                header('location: ../../view/main/index.php');
+                return false;
+            }
             $sql = "insert into usuario(nome, email, telefone, senha) values ('$nome', '$email', '$telefone', md5('$senha'))";
         }
         if(mysqli_query($con, $sql)) {

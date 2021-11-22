@@ -1,7 +1,11 @@
 <script>
-    function removeSuccess() {
+    function removeSuccess(pagina) {
         alert("Item removido do carrinho com sucesso!");
-        window.location.href = "../../../../view/main/index.php"
+        if(pagina == 2){
+            window.location.href = "../../../../view/main/cart.php"
+        } else {
+            window.location.href = "../../../../view/main/index.php"
+        }
 	}
     function revomeFail() {
         alert("Ocorreu um erro\nFavor entrar em contato com o desenvolvedor");
@@ -21,7 +25,8 @@
 	} else removeItem();
 	 
 	function removeItem(){
-		if(isset($_GET["codigoProduto"]) && isset($_GET["codigo"]) ){
+		if(isset($_GET["codigoProduto"]) && isset($_GET["codigo"]) && isset($_GET["pagina"])){
+            $pagina = $_GET["pagina"];
 			$codigo = $_GET["codigo"];
 			$codigoProduto = $_GET["codigoProduto"];
 			$email = $_SESSION["email"];
@@ -29,7 +34,7 @@
 			$conexao = new mysqli("localhost","root","","p2");
 			mysqli_query($conexao, $sql);
 			mysqli_close($conexao);
-			echo "<script>removeSuccess()</script>";
+			echo "<script>removeSuccess($pagina)</script>";
 		}else 
 			echo "<script>revomeFail()</script>";
 	}

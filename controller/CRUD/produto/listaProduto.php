@@ -1,4 +1,5 @@
 <?php 
+global $cartSubtotal;
     function listarProdutos(){
         $sql = "select * from produto order by codigo";
         $con = new mysqli("localhost", "root", "", "p2");
@@ -12,6 +13,7 @@
 
             $foto	= $reg["foto"];
             $valor = $reg["valor"];
+            $GLOBALS['cartSubtotal'] = $GLOBALS['cartSubtotal'] + $valor;
 
             if($reg["desconto"]) $desconto = $reg["desconto"]; else $desconto = ""; 
             
@@ -58,4 +60,95 @@
         }
         mysqli_close($con);
     }
+    function listarProdutosCarrinho(){        
+        if(!isset($_SESSION["email"])) return false;
+    
+        $email = $_SESSION["email"];
+        $sql = "select p.codigo, p.titulo, p.foto, p.cor, c.quantidade, p.valor, p.desconto from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email'  order by p.codigo";
+        $sqlCodigoCesta 	= "select c.codigo from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email'";
+        $con = new mysqli("localhost", "root", "", "p2");
+        $retorno = mysqli_query($con, $sql);
+        $retornoCodigoCesta = mysqli_query($con, $sqlCodigoCesta);
+    
+        while($reg = mysqli_fetch_array($retorno)){
+            if($regCodCesta = mysqli_fetch_array($retornoCodigoCesta)){
+                $codigo = $regCodCesta["codigo"];
+            }
+            if($reg["cor"]){
+                $cor = $reg["cor"];
+            } else $cor = "Incolor"; 
+    
+            $codigoProduto = $reg["codigo"];
+            $titulo	= $reg["titulo"];
+            $foto	= $reg["foto"];
+            $valor = $reg["valor"];
+            $GLOBALS['cartSubtotal'] = $GLOBALS['cartSubtotal'] + $valor;
+    
+            echo "
+            <div class='cart-item'>
+                <div class='row d-flex align-items-center text-left text-md-center'>
+                    <div class='col-12 col-md-5'><a class='cart-remove close mt-3 d-md-none' href='#'><i
+                                class='fa fa-times'> </i></a>
+                        <div class='d-flex align-items-center'>
+                            <a href='detail-1.html'><img class='cart-item-img'
+                                src='$foto'
+                                    alt='...'></a>
+                            <div class='cart-title text-left'><a class='text-dark link-animated'
+                                    href='detail-1.html'><strong>$titulo
+                                        </strong></a><br><span class='text-muted text-sm'>Cor:
+                                    $cor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-12 col-md-7 mt-4 mt-md-0'>
+                        <div class='row align-items-center'>
+                            <div class='col-md-10'>
+                                <div class='row'>
+                                        <div class='col-6 d-md-none text-muted'>Preço por item</div>
+                                        <div class='col-6 col-md-12 text-right text-md-center'>R$".number_format($valor, 2, '.', '')."
+                                        </div>
+                                </div>
+                            </div>
+                            <div class='col-2 d-none d-md-block text-center'>
+                                <a class='cart-remove text-muted' href='../../controller/CRUD/produto/cesta/removerItem.php?codigoProduto=$codigoProduto&codigo=$codigo&pagina=2'>
+                                    <svg class='svg-icon w-2rem h-2rem svg-icon-light'>
+                                        <use xlink:href='#close-1'> </use>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>";
+        }
+        mysqli_close($con);
+    }
+    
+    function resumeCart(){        
+        if(!isset($_SESSION["email"])) return false;
+        if ($GLOBALS['cartSubtotal'] >= 300) {
+            $frete = 0;
+        } else $frete = $GLOBALS['cartSubtotal'] * 0.04;
+        $impostos = $GLOBALS['cartSubtotal'] * 0.03;
+        $valorTotal = $GLOBALS['cartSubtotal'] + $frete + $impostos;
+    
+        echo '
+        <tr>
+            <th class="py-4">cartSubtotal </th>
+            <td class="py-4 text-right text-muted">R$'.number_format($GLOBALS['cartSubtotal'] , 2, '.', '').'</td>
+        </tr>
+        <tr>
+            <th class="py-4">Frete e manuseio</th>
+            <td class="py-4 text-right text-muted"> R$'.number_format($frete , 2, '.', '').'</td>
+        </tr>
+        <tr>
+            <th class="py-4">Impostos</th>
+            <td class="py-4 text-right text-muted">R$'.number_format($impostos , 2, '.', '').'</td>
+        </tr>
+        <tr>
+            <th class="pt-4">Total</th>
+            <td class="pt-4 text-right h3 font-weight-normal">R$'.number_format($valorTotal , 2, '.', '').'</td>
+        </tr>';
+    }
 ?>
+
+                            

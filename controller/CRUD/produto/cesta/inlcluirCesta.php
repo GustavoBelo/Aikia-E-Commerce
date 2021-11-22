@@ -1,5 +1,6 @@
 <?php 
 global $subtotal;
+
     function showCart(){
         if(!isset($_SESSION["email"])) return false;
         $email = $_SESSION["email"];
@@ -28,11 +29,14 @@ global $subtotal;
             echo
             "
             <div class='navbar-cart-product'>
-                <div class='d-flex align-items-center'><a href='detail-1.html'><img
-                            class='img-fluid navbar-cart-product-image'
+                <div class='d-flex align-items-center'><a href='#'><img
+                            class='img-fluid navbar-cart-product-image' 
+                            class='navbar-cart-product-link text-dark link-animated' 
+                            class='closeAll close-absolute' data-dismiss='modal' aria-label='Close'
+                            data-toggle='modal' data-target='#quickView$codigoProduto, #closeAll-1'
                             src='$foto'
                             alt='...' /></a>
-                    <div class='w-100'><a class='close' href='../../controller/CRUD/produto/cesta/removerItem.php?codigoProduto=$codigoProduto&codigo=$codigo'>
+                    <div class='w-100'><a class='close' href='../../controller/CRUD/produto/cesta/removerItem.php?codigoProduto=$codigoProduto&codigo=$codigo&pagina=1'>
                         <svg class='svg-icon sidebar-cart-icon'>
                             <use xlink:href='#close-1'> </use>
                         </svg></a>
