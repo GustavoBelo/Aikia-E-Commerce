@@ -12,7 +12,7 @@
                     <svg class="svg-icon navbar-icon">
                         <use xlink:href="#retail-bag-1"> </use>
                     </svg>
-                    <div class="navbar-icon-badge">6</div>
+                    <div class="navbar-icon-badge"><?php totalItems()?></div>
                 </a></li>
             <li class="list-inline-item"><a class="text-dark text-hover-primary" href="#" data-toggle="modal"
                     data-target="#sidebarRight">
