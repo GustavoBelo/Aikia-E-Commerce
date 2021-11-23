@@ -35,7 +35,7 @@
                                         </div>
                                     </div>
                                     <input class="form-control" name="loginPassword" id="loginPassword"
-                                        placeholder="Password" type="password" required
+                                        type="password" required
                                         data-msg="Please enter your password" style="float: left; width: 88%">
                                     &nbsp;
                                     <img id="olho" src="../../images/eye.png"/>

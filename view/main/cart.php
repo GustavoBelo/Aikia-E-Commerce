@@ -57,7 +57,7 @@
                     </div>
                     <div class="d-flex justify-content-between flex-column flex-lg-row mb-5 mb-lg-0"><a
                             class="btn btn-link text-muted" href="index.php"><i class="fa fa-chevron-left"></i>
-                            Continue Comprando</a><a class="btn btn-link text-primary" href="#"><i
+                            Continue Comprando</a><a class="btn btn-link text-primary" href="cart.php"><i
                                 class="fa fa-sync"></i> Recarregar
                             carrinho </a></div>
                 </div>

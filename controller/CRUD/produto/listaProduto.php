@@ -46,7 +46,7 @@ global $cartSubtotal;
                         </div>
                     </div>
                     <div class='position-relative'>
-                        <h3 class='text-base mb-1'><a class='text-dark' href='detail-1.html'>$titulo</a></h3>
+                        <h3 class='text-base mb-1'><a class='text-dark' href='#'>$titulo</a></h3>
                         <span class='text-gray-800 text-sm'>R$".number_format($valor, 2, '.', '')."</span><br><span
                         class='text-gray-500 text-sm'><del>".($desconto ? 'R$'.number_format($desconto, 2, '.', '').'' : '' )."</del></span>
                         <div class='product-stars text-xs'><i class='fa fa-star text-primary'></i><i
@@ -91,11 +91,11 @@ global $cartSubtotal;
                     <div class='col-12 col-md-5'><a class='cart-remove close mt-3 d-md-none' href='#'><i
                                 class='fa fa-times'> </i></a>
                         <div class='d-flex align-items-center'>
-                            <a href='detail-1.html'><img class='cart-item-img'
+                            <a href='#'><img class='cart-item-img'
                                 src='$foto'
                                     alt='...'></a>
                             <div class='cart-title text-left'><a class='text-dark link-animated'
-                                    href='detail-1.html'><strong>$titulo
+                                    href='#'><strong>$titulo
                                         </strong></a><br><span class='text-muted text-sm'>Cor:
                                     $cor</span>
                             </div>
