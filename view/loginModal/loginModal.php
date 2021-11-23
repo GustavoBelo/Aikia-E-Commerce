@@ -85,9 +85,12 @@
                                     <small class="form-text text-muted">Formato: (11)55555-5555</small>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" for="registerPassword">Senha</label>
-                                    <input class="form-control" id="registerPassword" name="registerPassword" type="password" required>
-                                </div>
+                                    <label class="form-label">Senha</label> <br>
+                                    <input class="form-control" id="registerPassword" name="registerPassword" 
+                                        type="password" style="float: left; width: 88%" required>
+                                    &nbsp;
+                                    <img id="olhoCadastro" src="../../images/eye.png"/>
+                                </div> <br>
                                 <div class="form-group text-center">
                                     <button class="btn btn-block btn-outline-dark" type="button"
                                     onclick="registerValidate()"

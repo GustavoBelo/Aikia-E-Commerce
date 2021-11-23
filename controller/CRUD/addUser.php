@@ -4,6 +4,10 @@
         alert("Usuário adicionado com Sucesso!\nAgora você pode fazer o login :D");
         window.location.href = "../../view/main/index.php";
     }
+    function jaCadastrado() {
+        alert('Email já cadastrado, tente logar! :D.')
+        window.location.href = "../../view/main/index.php";
+    }
 </script>
 <?php
     addUser();
@@ -17,8 +21,7 @@
             $allUsers = "select * from usuario user where user.email='$email'";
             $result = mysqli_query($con ,$allUsers);
             if (mysqli_num_rows($result)>0) {
-                echo "<script>alert('Email já cadastrado, tente logar! :D.');</script>"; 
-                header('location: ../../view/main/index.php');
+                echo "<script>jaCadastrado()</script>"; 
                 return false;
             }
             $sql = "insert into usuario(nome, email, telefone, senha) values ('$nome', '$email', '$telefone', md5('$senha'))";

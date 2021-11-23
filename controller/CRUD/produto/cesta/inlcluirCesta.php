@@ -5,7 +5,7 @@ global $subtotal;
         if(!isset($_SESSION["email"])) return false;
         $email = $_SESSION["email"];
         $sql 	= "select p.codigo, p.titulo, p.foto, c.quantidade, p.valor, p.desconto from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email'  order by p.codigo";
-        $sqlCodigoCesta 	= "select c.codigo from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email'";
+        $sqlCodigoCesta 	= "select c.codigo from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email' order by p.codigo";
         $con = new mysqli("localhost", "root", "", "p2");
         $retorno = mysqli_query($con, $sql);
         $retornoCodigoCesta = mysqli_query($con, $sqlCodigoCesta);

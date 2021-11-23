@@ -1,3 +1,9 @@
+<script>
+    function addItem(codigo){
+        window.location.href = "../../controller/CRUD/produto/cesta/adicionarAoCarrinho.php?codigo="+codigo
+    }
+</script>
+
 <?php 
     function detalhaProduto(){
         $sql = "select * from produto order by codigo";
@@ -57,12 +63,12 @@
                                         </ul>
                                     </div>
                                     <p class='mb-4 text-muted'>$descritivo</p>
-                                    <form id='buyForm_modal' action='#'>
+                                    <form id='buyForm_modal'>
                                         <div class='input-group w-100 mb-4'>
                                             <input class='form-control detail-quantity' name='items' 
                                                 value='$quantidade' disabled>
                                             <div class='input-group-append flex-grow-1'>
-                                                <button class='btn btn-dark btn-block' type='submit'> <i
+                                                <button class='btn btn-dark btn-block' type='button' onclick='addItem($codigo)'> <i
                                                         class='fa fa-shopping-cart mr-1'></i>Adicionar ao
                                                     carrinho</button>
                                             </div>

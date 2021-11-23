@@ -1,6 +1,6 @@
 <header class="header">
     <nav class="navbar bg-transparent border-0 shadow-0 navbar-light px-lg-5 "><a class="navbar-brand"
-            href="#">Aikia</a>
+            href="index.php"><h1>Aikia</h1></a>
         <ul class="list-inline mb-0 d-block">
             <li class="list-inline-item mr-3"><a class="text-dark text-hover-primary" href="#" data-toggle="modal"
                     data-target="#loginModal">

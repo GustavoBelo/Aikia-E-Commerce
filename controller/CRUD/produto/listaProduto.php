@@ -60,12 +60,13 @@ global $cartSubtotal;
         }
         mysqli_close($con);
     }
+
     function listarProdutosCarrinho(){        
         if(!isset($_SESSION["email"])) return false;
     
         $email = $_SESSION["email"];
-        $sql = "select p.codigo, p.titulo, p.foto, p.cor, c.quantidade, p.valor, p.desconto from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email'  order by p.codigo";
-        $sqlCodigoCesta 	= "select c.codigo from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email'";
+        $sql = "select c.codigoProduto, p.titulo, p.foto, p.cor, c.quantidade, p.valor, p.desconto from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email'  order by p.codigo";
+        $sqlCodigoCesta 	= "select c.codigo from cesta c, produto p where c.codigoProduto=p.codigo and c.email='$email' order by p.codigo";
         $con = new mysqli("localhost", "root", "", "p2");
         $retorno = mysqli_query($con, $sql);
         $retornoCodigoCesta = mysqli_query($con, $sqlCodigoCesta);
@@ -78,7 +79,7 @@ global $cartSubtotal;
                 $cor = $reg["cor"];
             } else $cor = "Incolor"; 
     
-            $codigoProduto = $reg["codigo"];
+            $codigoProduto = $reg["codigoProduto"];
             $titulo	= $reg["titulo"];
             $foto	= $reg["foto"];
             $valor = $reg["valor"];

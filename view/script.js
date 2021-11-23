@@ -150,3 +150,17 @@ document.getElementById('olho').addEventListener('mouseup', function() {
 document.getElementById('olho').addEventListener('mousemove', function() {
     document.getElementById('newPassword').type = 'password';
 });
+
+// olho da senha
+document.getElementById('olhoCadastro').addEventListener('mousedown', function() {
+    document.getElementById('registerPassword').type = 'text';
+});
+
+document.getElementById('olhoCadastro').addEventListener('mouseup', function() {
+    document.getElementById('registerPassword').type = 'password';
+});
+
+// Para que o password não fique exposto apos mover a imagem.
+document.getElementById('olhoCadastro').addEventListener('mousemove', function() {
+    document.getElementById('registerPassword').type = 'password';
+});
