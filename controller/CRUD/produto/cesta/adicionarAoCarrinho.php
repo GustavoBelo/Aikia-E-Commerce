@@ -16,7 +16,7 @@
 
 <?php
 	session_start();
-	if(session_id() == null) {
+	if(session_id() == null || !($email = $_SESSION["email"])) {
 		echo "<script>noLoginError()</script>";
 	} else addItem();
 	 
